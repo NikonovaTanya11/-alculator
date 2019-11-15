@@ -1,0 +1,132 @@
+﻿<Window x:Class="calc.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:calc"
+        mc:Ignorable="d"
+        Title="Сalculator" Height="600" Width="800">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40*" />
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="39*" />
+            <RowDefinition Height="42*" />
+            <RowDefinition Height="40*" />
+            <RowDefinition Height="38" />
+            <RowDefinition Height="41*" />
+            <RowDefinition Height="48*" />
+            <RowDefinition Height="47*" />
+            <RowDefinition Height="48*" />
+            <RowDefinition Height="48*" />
+            <RowDefinition Height="48*" />
+            <RowDefinition Height="46*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="132*" />
+            <ColumnDefinition Width="21*" />
+            <ColumnDefinition Width="111*"/>
+            <ColumnDefinition Width="132*" />
+            <ColumnDefinition Width="132*" />
+            <ColumnDefinition Width="132*" />
+            <ColumnDefinition Width="94*" />
+            <ColumnDefinition Width="38*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="textBlock" Grid.Column="0" Grid.ColumnSpan="5" FontSize="22" Grid.RowSpan="2" />
+        <Button x:Name="buttonHec" Grid.Column="0" Grid.Row="2" Content="Hec" FontSize="22" FontWeight="Bold" Click="ButtonHec_Click"/>
+
+
+
+        <Button  x:Name="buttonDec" Grid.Column="0" Grid.Row="3" Content="Dec" FontSize="22" FontWeight="Bold" Click="ButtonDec_Click"/>
+
+
+
+        <Button   x:Name="buttonOct" Grid.Column="0" Grid.Row="4" Content="Oct" FontSize="22" FontWeight="Bold" Click="ButtonOct_Click"></Button>
+
+
+
+        <Button  x:Name="buttonBin" Grid.Column="0" Grid.Row="5" Content="Bin" FontSize="22" FontWeight="Bold" Click="ButtonBin_Click"></Button>
+
+
+
+        <Button x:Name="buttonMminus"  Grid.Column="4" Grid.Row="6" Content="М-" FontSize="22" FontWeight="Bold" Click="ButtonMminus_Click"></Button>
+        <Button x:Name="buttonsqrtN" Grid.Column="4" Grid.Row="7" Content="n√" FontSize="22" FontWeight="Bold" Click="ButtonsqrtN_Click"/>
+        <Button x:Name="buttonPr" Grid.Column="4" Grid.Row="8" Content="%" FontSize="22" FontWeight="Bold" Click="ButtonPr_Click"></Button>
+        <Button x:Name="button8" Grid.Column="4" Grid.Row="9" Content="8" FontSize="22" FontWeight="Bold" Click="Button8_Click">
+            <Button.BorderBrush>
+                <SolidColorBrush Color="#FF31368D" Opacity="0.3"/>
+            </Button.BorderBrush>
+        </Button>
+        <Button x:Name="button7" Grid.Column="3" Grid.Row="9" Content="7" FontSize="23" FontWeight="Bold" Click="Button7_Click"></Button>
+        <Button x:Name="button10X" Grid.Column="1" Grid.Row="9" Content="10^x" FontSize="22" FontWeight="Bold" Grid.ColumnSpan="2" Click="Button10X_Click"/>
+        <Button x:Name="buttonDivX" Grid.Column="0" Grid.Row="9" Content="1/x" FontSize="22" FontWeight="Bold" Click="ButtonDivX_Click"/>
+        <Button x:Name="buttonX3" Grid.Column="1" Grid.Row="8" Content="x^3" FontSize="22" FontWeight="Bold" Grid.ColumnSpan="2" Click="ButtonX3_Click" ></Button>
+        <Button x:Name="buttonCos" Grid.Column="1" Grid.Row="7" Content="cos" FontSize="22" FontWeight="Bold" Grid.ColumnSpan="2" Click="ButtonCos_Click"></Button>
+        <Button x:Name="buttonMR" Grid.Column="1" Grid.Row="6" Content="MR" FontSize="22" FontWeight="Bold" Grid.ColumnSpan="2" Click="ButtonMR_Click"/>
+
+        <Button x:Name="buttonX2" Grid.Column="3" Grid.Row="8" Content="x^2" FontSize="22" FontWeight="Bold" Click="ButtonX2_Click"/>
+        <Button x:Name="buttonPi" Grid.Column="3" Grid.Row="7" Content="Pi" FontSize="22" FontWeight="Bold" Click="ButtonPi_Click"/>
+        <Button x:Name="buttonMplus" Grid.Column="3" Grid.Row="6" FontSize="22" Content="M+" FontWeight="Bold"  Click="ButtonMplus_Click"/>
+
+        <Button  x:Name="buttonMC" Grid.Column="0" Grid.Row="6" Content="MC" FontSize="22" FontWeight="Bold" Click="ButtonMC_Click" ></Button>
+        <Button x:Name="buttonSin" Grid.Column="0" Grid.Row="7" Content="sin" FontSize="22" FontWeight="Bold" Click="ButtonSin_Click"></Button>
+        <Button x:Name="buttonXY" Grid.Column="0" Grid.Row="8" Content="x^y" FontSize="22" FontWeight="Bold" Click="ButtonXY_Click"></Button>
+        <Button x:Name="buttonMod" Grid.Column="0" Grid.Row="10" Content="Mod" FontSize="22" FontWeight="Bold" Click="ButtonMod_Click"></Button>
+        <Button x:Name="buttonExp" Grid.Column="0" Grid.Row="11" Content="tg" FontSize="22" FontWeight="Bold" Click="ButtonExp_Click"/>
+        <Button x:Name="buttonOpBracket" Grid.Column="0" Grid.Row="12" Content="" FontSize="22" FontWeight="Bold"></Button>
+        <Button x:Name="buttonMLn" Grid.Column="1" Grid.Row="10" Content="ln" FontSize="22" FontWeight="Bold" Grid.ColumnSpan="2" Click="ButtonMLn_Click" />
+        <Button x:Name="buttonlog" Grid.Column="1" Grid.Row="11" Content="log" FontSize="22" FontWeight="Bold" Grid.ColumnSpan="2" Click="Buttonlog_Click"/>
+        <Button x:Name="buttonCE" Grid.Column="1" Grid.Row="12" Content="CE" FontSize="22" FontWeight="Bold" Grid.ColumnSpan="2" Click="ButtonCE_Click"/>
+        <Button x:Name="buttonPlMn" Grid.Column="3" Grid.Row="12" FontSize="22" FontWeight="Bold" Content="+-" Click="ButtonPlMn_Click"/>
+        <Button x:Name="button1" Grid.Column="3" Grid.Row="11" Content="1" FontSize="22" FontWeight="Bold" Click="Button1_Click"/>
+        <Button x:Name="button4" Grid.Column="3" Grid.Row="10" Content="4" FontSize="22" FontWeight="Bold" Click="Button4_Click"></Button>
+        <Button x:Name="button5" Grid.Column="4" Grid.Row="10" Content="5" FontSize="24" FontWeight="Bold" Click="Button5_Click">
+
+        </Button>
+        <Button x:Name="button2" Grid.Column="4" Grid.Row="11" Content="2" FontSize="22" FontWeight="Bold" Click="Button2_Click"/>
+        <Button x:Name="buttonPoint" Grid.Column="5" Grid.Row="12" Content="," FontSize="22" FontWeight="Bold" Click="ButtonPoint_Click"/>
+        <Button x:Name="buttonEqually" Grid.Column="6" Grid.Row="12" Content="=" FontSize="22" FontWeight="Bold" Click="ButtonEqually_Click" Grid.ColumnSpan="2" ></Button>
+        <Button x:Name="button3" Grid.Column="5" Grid.Row="11" Content="3" FontSize="22" FontWeight="Bold" Click="Button3_Click"></Button>
+        <Button x:Name="buttonPlus" Grid.Column="6" Grid.Row="11" Content="+" FontSize="22" FontWeight="Bold" Click="ButtonPlus_Click" Grid.ColumnSpan="2"/>
+        <Button x:Name="button6" Grid.Column="5" Grid.Row="10" Content="6" FontSize="22" FontWeight="Bold" Click="Button6_Click"></Button>
+        <Button x:Name="button9" Grid.Column="5" Grid.Row="9" Content="9" FontSize="22" FontWeight="Bold" Click="Button9_Click_1"></Button>
+        <Button x:Name="buttonFact" Grid.Column="5" Grid.Row="8" Content="n!" FontSize="22" FontWeight="Bold" Click="ButtonFact_Click"/>
+        <Button x:Name="button0" Grid.Column="4" Grid.Row="12" Content="0"  FontSize="22" FontWeight="Bold" Click="Button0_Click_1" />
+        <Button x:Name="buttonMinus" Grid.Column="6" Grid.Row="10" Content="-" FontSize="22" FontWeight="Bold" Click="ButtonMinus_Click" Grid.ColumnSpan="2" ></Button>
+
+        <Button x:Name="buttonMult" Grid.Column="6" Grid.Row="9" Content="*" FontSize="22" FontWeight="Bold" Click="ButtonMult_Click" Grid.ColumnSpan="2"></Button>
+        <Button x:Name="buttonDiv" Grid.Column="6" Grid.Row="8" Content="/" FontSize="22" FontWeight="Bold" Click="ButtonDiv_Click" Grid.ColumnSpan="2"/>
+        <Button x:Name="buttonSqrt" Grid.Column="6" Grid.Row="7" Content="√" FontSize="22" FontWeight="Bold" Grid.ColumnSpan="2" Click="ButtonSqrt_Click"></Button>
+        <Button x:Name="buttonClear"  Grid.Column="6" Grid.Row="6" Content="C" FontSize="22" FontWeight="Bold" Click="ButtonClear_Click" Grid.ColumnSpan="2"></Button>
+
+        <Button x:Name="buttonsgrt3" Grid.Column="5" Grid.Row="7" Content="3√" FontWeight="Bold" FontSize="22" Click="Buttonsgrt3_Click"/>
+
+        <Button x:Name="buttonBackSpace" Grid.Column="5" Grid.Row="6" Content="&lt;--" FontSize="22" FontWeight="Bold" Click="ButtonBackSpace_Click"/>
+        <TextBox x:Name="textBox" Grid.Column="1" IsReadOnly ="True"  TextAlignment="Right" Grid.Row="2" TextWrapping="Wrap" Grid.ColumnSpan="7" Grid.RowSpan="4" RenderTransformOrigin="0.5,0.5" FontSize="72" Margin="0,2,2,5">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.057"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <Label Content="" Grid.ColumnSpan="8" Grid.RowSpan="2" Margin="0,0,0,5">
+            <Label.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FFD3A7A7" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.BorderBrush>
+            <Label.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FFEEEEEE" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Background>
+        </Label>
+    </Grid>
+</Window>
